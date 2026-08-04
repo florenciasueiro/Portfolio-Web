@@ -2,19 +2,15 @@ import type { ExperienceItem, Project } from "../types";
 
 export const NAV_ITEMS = ["Historia", "Sobre mí", "Proyectos", "Experiencia", "Contacto"] as const;
 
-export const TECHNOLOGIES = [
-  "HTML5", "CSS3", "JavaScript", "TypeScript", "Python", "Java", "C#", "PHP",
-  "React", "Next.js", "Vue.js", "Angular", "Node.js", "Express", "FastAPI", ".NET", "Spring Boot", "Laravel",
-  "Tailwind CSS", "Sass", "Bootstrap", "shadcn/ui", "Framer Motion",
-  "PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "Firebase",
-  "REST APIs", "GraphQL", "WebSockets",
-  "Git", "GitHub", "Docker", "Kubernetes", "Linux", "CI/CD", "GitHub Actions",
-  "AWS", "Azure", "Google Cloud", "Vercel", "Cloudflare",
-  "Jest", "Vitest", "Playwright", "Cypress",
-  "Figma", "UI / UX", "Responsive Design", "Accesibilidad", "SEO / SEM", "WordPress",
-  "ChatGPT", "OpenAI API", "Claude", "Gemini", "GitHub Copilot", "Cursor",
-  "LangChain", "RAG", "Vector Databases", "AI Agents", "MCP", "Prompt Engineering", "n8n",
-];
+export const TECHNOLOGY_GROUPS = [
+  { name: "Frontend", tools: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Angular", "Tailwind CSS", "Sass", "Bootstrap", "shadcn/ui", "Framer Motion"] },
+  { name: "Backend & APIs", tools: ["Node.js", "Express", "Python", "FastAPI", "Java", "Spring Boot", "C#", ".NET", "PHP", "Laravel", "REST APIs", "GraphQL", "WebSockets"] },
+  { name: "Datos", tools: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "Firebase", "Vector Databases"] },
+  { name: "Cloud & DevOps", tools: ["Git", "GitHub", "Docker", "Kubernetes", "Linux", "CI/CD", "GitHub Actions", "AWS", "Azure", "Google Cloud", "Vercel", "Cloudflare"] },
+  { name: "Testing", tools: ["Jest", "Vitest", "Playwright", "Cypress"] },
+  { name: "Diseño & Producto", tools: ["Figma", "UI / UX", "Responsive Design", "Accesibilidad", "SEO / SEM", "WordPress"] },
+  { name: "IA & Automatización", tools: ["ChatGPT", "OpenAI API", "Claude", "Gemini", "GitHub Copilot", "Cursor", "LangChain", "RAG", "AI Agents", "MCP", "Prompt Engineering", "n8n"] },
+] as const;
 
 export const PROJECTS: Project[] = [
   {

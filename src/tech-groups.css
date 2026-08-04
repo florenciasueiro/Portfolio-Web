@@ -1,0 +1,77 @@
+.tech-section {
+  padding-block: 110px;
+}
+
+.tech-section .section-heading {
+  margin-bottom: 58px;
+}
+
+.tech-section .section-heading h2 {
+  font-size: clamp(40px, 5vw, 72px);
+}
+
+.tech-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-left: 220px;
+}
+
+.tech-groups article {
+  position: relative;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .018);
+}
+
+.tech-groups article:last-child {
+  grid-column: 1 / -1;
+}
+
+.tech-group-index {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #5f5f67;
+  font-size: 9px;
+}
+
+.tech-groups h3 {
+  margin: 0 0 22px;
+  color: #d8d8de;
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.tech-groups article > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tech-groups article > div > span {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: #a8a8b1;
+  font-size: 10px;
+}
+
+.tech-groups article:last-child > div > span {
+  border-color: rgba(139, 92, 246, .32);
+  color: #c4b5fd;
+  background: rgba(139, 92, 246, .06);
+}
+
+@media (max-width: 900px) {
+  .tech-groups { margin-left: 0; }
+}
+
+@media (max-width: 600px) {
+  .tech-section { padding-block: 76px; }
+  .tech-section .section-heading { margin-bottom: 42px; }
+  .tech-groups { grid-template-columns: 1fr; }
+  .tech-groups article:last-child { grid-column: auto; }
+}
