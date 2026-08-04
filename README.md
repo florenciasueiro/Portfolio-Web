@@ -6,7 +6,7 @@ Portfolio profesional construido con React 19, Vite, TypeScript, Tailwind CSS, F
 
 Reemplazá estos datos de ejemplo:
 
-- `tuemail@ejemplo.com` en `src/sections/Contact.tsx`.
+- `florencia.sueiro@davinci.edu.ar` en `src/sections/Contact.tsx`.
 - Los enlaces `#` de LinkedIn y GitHub en `src/sections/Footer.tsx`.
 - Agregá los repositorios reales en `src/constants/data.ts` cuando quieras mostrar botones de GitHub.
 
