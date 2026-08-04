@@ -1,0 +1,1 @@
+export function Footer() { return <footer><a className="logo" href="#inicio">FS<span>·</span></a><div><a href="#">LinkedIn</a><a href="#">GitHub</a></div><p>© 2026 Flor S. · Buenos Aires</p></footer>; }

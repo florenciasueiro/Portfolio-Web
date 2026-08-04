@@ -1,0 +1,1 @@
+export function Loader({ compact = false }: { compact?: boolean }) { return <div className={compact ? "loader compact" : "loader"} role="status"><i /><span className="sr-only">Cargando</span></div>; }
