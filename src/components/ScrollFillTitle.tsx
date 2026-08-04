@@ -4,7 +4,7 @@ import { useRef } from "react";
 function Character({ character, index, total, progress }: { character: string; index: number; total: number; progress: MotionValue<number> }) {
   const start = (index / total) * 0.82;
   const end = Math.min(start + 0.18, 1);
-  const opacity = useTransform(progress, [start, end], [0.16, 1]);
+  const opacity = useTransform(progress, [start, end], [0, 1]);
 
   return <motion.span aria-hidden="true" style={{ opacity }}>{character === " " ? "\u00a0" : character}</motion.span>;
 }

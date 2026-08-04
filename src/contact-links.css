@@ -1,0 +1,10 @@
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 24px;
+}
+
+.contact-grid > div .contact-links a {
+  margin-top: 0;
+}
