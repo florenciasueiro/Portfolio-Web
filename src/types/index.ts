@@ -4,6 +4,7 @@ export type Project = {
   description: string;
   stack: string[];
   demo: string;
+  previewUrl?: string;
   github?: string;
   accent: string;
   index: string;

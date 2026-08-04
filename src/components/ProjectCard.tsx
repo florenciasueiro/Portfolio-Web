@@ -12,7 +12,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const reset = () => { mx.set(.5); my.set(.5); };
   return <motion.article className="project-card" onMouseMove={move} onMouseLeave={reset} style={{ rotateX: rx, rotateY: ry, transformPerspective: 1000 }}>
     <div className="project-visual" style={{ "--accent": project.accent } as React.CSSProperties}>
-      <span>{project.index}</span><div className="project-window"><i /><i /><i /><div className="window-grid"><b /><b /><b /></div></div>
+      <span>{project.index}</span><div className={`project-window ${project.previewUrl ? "has-preview" : ""}`}><i /><i /><i />{project.previewUrl ? <iframe src={project.previewUrl} title={`Vista previa de ${project.title}`} loading="lazy" tabIndex={-1} /> : <div className="window-grid"><b /><b /><b /></div>}</div>
     </div>
     <div className="project-content"><small>{project.eyebrow}</small><h3>{project.title}</h3><p>{project.description}</p>
       <div className="badge-row">{project.stack.map(item => <Badge key={item}>{item}</Badge>)}</div>

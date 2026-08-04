@@ -1,0 +1,23 @@
+.project-window.has-preview {
+  width: 82%;
+  aspect-ratio: 1.45;
+  overflow: hidden;
+  background: #e9e8ec;
+}
+
+.project-window.has-preview iframe {
+  display: block;
+  width: 100%;
+  height: calc(100% - 18px);
+  margin-top: 8px;
+  border: 0;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #dddce2, #f5f4f7);
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .project-window.has-preview {
+    width: 88%;
+  }
+}
