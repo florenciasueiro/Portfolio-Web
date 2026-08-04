@@ -26,7 +26,7 @@ export function ScrollFillText({ text }: { text: string }) {
   let wordIndex = 0;
 
   return <span ref={ref} className="scroll-fill-text" aria-label={text}>{words.map((word, index) => {
-    if (/^\s+$/.test(word)) return <span aria-hidden="true" key={index}>{word}</span>;
+    if (/^\s+$/.test(word)) return <span className="scroll-fill-space" aria-hidden="true" key={index}>{"\u00a0"}</span>;
     const currentIndex = wordIndex++;
     return reducedMotion
       ? <span aria-hidden="true" key={index}>{word}</span>

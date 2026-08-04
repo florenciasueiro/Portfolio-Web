@@ -1,0 +1,9 @@
+body .story {
+  height: 580vh;
+}
+
+@media (max-width: 600px) {
+  body .story {
+    height: 520vh;
+  }
+}

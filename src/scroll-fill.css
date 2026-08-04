@@ -7,6 +7,11 @@
   will-change: opacity;
 }
 
+.scroll-fill-text > .scroll-fill-space {
+  width: .28em;
+  font-size: inherit;
+}
+
 .values > span > span,
 .values > span > span > span {
   padding: 0;

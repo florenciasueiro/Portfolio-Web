@@ -1,0 +1,45 @@
+.nav-wrap .navbar {
+  position: relative;
+  isolation: isolate;
+  border-color: rgba(255, 255, 255, .16);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .11), rgba(255, 255, 255, .025) 48%, rgba(139, 92, 246, .08)),
+    rgba(10, 10, 13, .48);
+  -webkit-backdrop-filter: blur(24px) saturate(165%);
+  backdrop-filter: blur(24px) saturate(165%);
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, .36),
+    inset 0 1px 0 rgba(255, 255, 255, .16),
+    inset 0 -1px 0 rgba(255, 255, 255, .035);
+}
+
+.nav-wrap .navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(105deg, rgba(255, 255, 255, .12), transparent 28%, transparent 72%, rgba(139, 92, 246, .08));
+}
+
+.nav-wrap .navbar > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-wrap .mobile-menu {
+  border-color: rgba(255, 255, 255, .15);
+  background: linear-gradient(145deg, rgba(255, 255, 255, .1), rgba(12, 12, 16, .68));
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+  backdrop-filter: blur(26px) saturate(160%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .12);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .nav-wrap .navbar,
+  .nav-wrap .mobile-menu {
+    background: #101012;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
