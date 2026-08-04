@@ -1,0 +1,54 @@
+.kinetic-band {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  overflow: hidden;
+  border-block: 1px solid rgba(139, 92, 246, .55);
+  background: var(--accent);
+  color: #080808;
+  transform: rotate(-1.2deg) scale(1.02);
+}
+
+.kinetic-band-track {
+  display: flex;
+  width: max-content;
+  animation: kinetic-band-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.kinetic-band-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.kinetic-band-group > span {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  padding-left: 34px;
+  font-size: clamp(18px, 2.2vw, 32px);
+  font-weight: 750;
+  letter-spacing: -.035em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.kinetic-band-group i {
+  font-style: normal;
+  font-size: .65em;
+}
+
+@keyframes kinetic-band-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+  .kinetic-band-group { padding-block: 17px; }
+  .kinetic-band-group > span { gap: 24px; padding-left: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-band-track { animation: none; }
+}

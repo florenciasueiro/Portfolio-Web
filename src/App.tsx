@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Navbar } from "./components/Navbar";
 import { Cursor } from "./components/Cursor";
+import { KineticBand } from "./components/KineticBand";
 import { Loader } from "./components/ui/Loader";
 import { Hero } from "./sections/Hero";
 import { ScrollyStory } from "./sections/ScrollyStory";
@@ -30,6 +31,7 @@ export default function App() {
             <Suspense fallback={<Loader compact />}><AmbientScene /></Suspense>
           </div>
           <Hero />
+          <KineticBand />
           <ScrollyStory />
           <About />
           <Technologies />
