@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Cursor } from "./components/Cursor";
 import { Loader } from "./components/ui/Loader";
 import { Hero } from "./sections/Hero";
+import { ScrollyStory } from "./sections/ScrollyStory";
 import { About } from "./sections/About";
 import { Technologies } from "./sections/Technologies";
 import { Projects } from "./sections/Projects";
@@ -29,6 +30,7 @@ export default function App() {
             <Suspense fallback={<Loader compact />}><AmbientScene /></Suspense>
           </div>
           <Hero />
+          <ScrollyStory />
           <About />
           <Technologies />
           <Projects />

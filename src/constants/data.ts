@@ -1,6 +1,6 @@
 import type { ExperienceItem, Project } from "../types";
 
-export const NAV_ITEMS = ["Sobre mí", "Tecnologías", "Proyectos", "Experiencia", "Contacto"] as const;
+export const NAV_ITEMS = ["Historia", "Sobre mí", "Proyectos", "Experiencia", "Contacto"] as const;
 
 export const TECHNOLOGIES = [
   "React", "TypeScript", "JavaScript", "Vue", "Node.js", "HTML5", "CSS3",
