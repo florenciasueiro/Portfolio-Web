@@ -3,8 +3,17 @@ import type { ExperienceItem, Project } from "../types";
 export const NAV_ITEMS = ["Historia", "Sobre mí", "Proyectos", "Experiencia", "Contacto"] as const;
 
 export const TECHNOLOGIES = [
-  "React", "TypeScript", "JavaScript", "Vue", "Node.js", "HTML5", "CSS3",
-  "Tailwind CSS", "MySQL", "Git", "Figma", "SEO / SEM",
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "Python", "Java", "C#", "PHP",
+  "React", "Next.js", "Vue.js", "Angular", "Node.js", "Express", "FastAPI", ".NET", "Spring Boot", "Laravel",
+  "Tailwind CSS", "Sass", "Bootstrap", "shadcn/ui", "Framer Motion",
+  "PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "Firebase",
+  "REST APIs", "GraphQL", "WebSockets",
+  "Git", "GitHub", "Docker", "Kubernetes", "Linux", "CI/CD", "GitHub Actions",
+  "AWS", "Azure", "Google Cloud", "Vercel", "Cloudflare",
+  "Jest", "Vitest", "Playwright", "Cypress",
+  "Figma", "UI / UX", "Responsive Design", "Accesibilidad", "SEO / SEM", "WordPress",
+  "ChatGPT", "OpenAI API", "Claude", "Gemini", "GitHub Copilot", "Cursor",
+  "LangChain", "RAG", "Vector Databases", "AI Agents", "MCP", "Prompt Engineering", "n8n",
 ];
 
 export const PROJECTS: Project[] = [

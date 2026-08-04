@@ -20,15 +20,15 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  padding: 22px 0;
+  padding: 10px 0;
 }
 
 .kinetic-band-group > span {
   display: flex;
   align-items: center;
-  gap: 34px;
-  padding-left: 34px;
-  font-size: clamp(18px, 2.2vw, 32px);
+  gap: 17px;
+  padding-left: 17px;
+  font-size: clamp(10px, 1.1vw, 16px);
   font-weight: 750;
   letter-spacing: -.035em;
   text-transform: uppercase;
@@ -45,8 +45,8 @@
 }
 
 @media (max-width: 600px) {
-  .kinetic-band-group { padding-block: 17px; }
-  .kinetic-band-group > span { gap: 24px; padding-left: 24px; }
+  .kinetic-band-group { padding-block: 8px; }
+  .kinetic-band-group > span { gap: 12px; padding-left: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
