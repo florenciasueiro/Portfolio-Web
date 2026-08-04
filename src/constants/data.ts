@@ -26,6 +26,8 @@ export const PROJECTS: Project[] = [
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
+  { role: "Fundadora y directora", company: "Eterna", period: "Emprendimiento propio · Lomas de Zamora", description: "Creación y dirección de un centro de estética integral: identidad de marca, estrategia digital, comunicación, captación de clientes y gestión operativa." },
+  { role: "Fundadora & Software Engineer", company: "Sodium Software", period: "Emprendimiento propio · Actualidad", description: "Creación y desarrollo de proyectos web personales, combinando producto, diseño UX/UI, frontend, automatización e inteligencia artificial." },
   { role: "Desarrolladora web", company: "Grupo Asset", period: "Proyecto institucional", description: "Diseño y desarrollo de una experiencia digital comercial para Asset Real Estate.", link: "https://grupo-asset.com/" },
   { role: "Desarrollo web & automatización", company: "Independiente", period: "Actualidad", description: "Interfaces, sitios y flujos digitales orientados a resolver problemas reales de negocio." },
   { role: "Gestión de RR. HH. y operaciones", company: "ZellGo", period: "Buenos Aires", description: "Coordinación de procesos, equipos y automatizaciones internas en un entorno comercial." },
