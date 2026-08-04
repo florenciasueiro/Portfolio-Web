@@ -54,10 +54,10 @@ const chapters = [
 
 function Chapter({ chapter, index, progress }: { chapter: typeof chapters[number]; index: number; progress: MotionValue<number> }) {
   const center = index / (chapters.length - 1);
-  const input = index === 0 ? [0, .1, .2] : index === chapters.length - 1 ? [.8, .9, 1] : [center - .12, center, center + .12];
-  const opacityOutput = index === 0 ? [1, 1, 0] : index === chapters.length - 1 ? [0, 1, 1] : [0, 1, 0];
-  const yOutput = index === 0 ? [0, 0, -70] : index === chapters.length - 1 ? [70, 0, 0] : [70, 0, -70];
-  const blurOutput = index === 0 ? ["blur(0px)", "blur(0px)", "blur(14px)"] : index === chapters.length - 1 ? ["blur(14px)", "blur(0px)", "blur(0px)"] : ["blur(14px)", "blur(0px)", "blur(14px)"];
+  const input = index === 0 ? [0, .1, .2, 1] : index === chapters.length - 1 ? [.8, .9, 1] : [center - .12, center, center + .12];
+  const opacityOutput = index === 0 ? [1, 1, 0, 0] : index === chapters.length - 1 ? [0, 1, 1] : [0, 1, 0];
+  const yOutput = index === 0 ? [0, 0, -70, -70] : index === chapters.length - 1 ? [70, 0, 0] : [70, 0, -70];
+  const blurOutput = index === 0 ? ["blur(0px)", "blur(0px)", "blur(14px)", "blur(14px)"] : index === chapters.length - 1 ? ["blur(14px)", "blur(0px)", "blur(0px)"] : ["blur(14px)", "blur(0px)", "blur(14px)"];
   const opacity = useTransform(progress, input, opacityOutput);
   const y = useTransform(progress, input, yOutput);
   const filter = useTransform(progress, input, blurOutput);
