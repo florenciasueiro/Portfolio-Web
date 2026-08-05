@@ -1,0 +1,3 @@
+/* The first content cue enters while the portrait finishes its fade-out. */
+.kinetic-band{margin-top:-9svh}
+@media(max-width:600px){.kinetic-band{margin-top:-6svh}}

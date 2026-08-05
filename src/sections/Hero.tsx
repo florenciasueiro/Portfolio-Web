@@ -15,8 +15,8 @@ export function Hero() {
   const heroRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const imageScale = useTransform(scrollYProgress, [0, .72], [1, 1.08]);
-  const imageBlur = useTransform(scrollYProgress, [0, .82], ["blur(0px)", "blur(32px)"]);
-  const imageOpacity = useTransform(scrollYProgress, [0, .74, 1], [1, 1, 0]);
+  const imageBlur = useTransform(scrollYProgress, [0, .56], ["blur(0px)", "blur(32px)"]);
+  const imageOpacity = useTransform(scrollYProgress, [0, .42, .72], [1, 1, 0]);
   const [role, setRole] = useState(0);
   useEffect(() => { const timer = window.setInterval(() => setRole((value) => (value + 1) % roles.length), 2600); return () => window.clearInterval(timer); }, []);
   return <section ref={heroRef} id="inicio" className="hero hero-premium"><div className="hero-glow" /><div className="hero-orbit hero-orbit--one" /><div className="hero-orbit hero-orbit--two" />

@@ -1,0 +1,3 @@
+@media(pointer:fine){
+  .cursor{display:block!important;z-index:2147483647!important;background:#ff6b00!important;mix-blend-mode:normal!important;box-shadow:0 0 0 4px rgba(255,107,0,.18),0 0 18px rgba(255,107,0,.9)}
+}
