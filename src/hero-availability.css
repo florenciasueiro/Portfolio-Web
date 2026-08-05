@@ -1,4 +1,4 @@
 /* Availability badge sits higher and closer to the portrait's left shoulder. */
-.hero-glass--availability{left:calc(70% - min(16vw,190px));top:31%}
+.hero-glass--availability{left:calc(75% - min(16vw,190px));top:31%}
 @media(max-width:900px){.hero-glass--availability{left:calc(50% - min(22vw,170px));top:43%}}
 @media(max-width:600px){.hero-glass--availability{left:30%;top:52%}}

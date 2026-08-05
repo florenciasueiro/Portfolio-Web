@@ -1,3 +1,3 @@
-.hero-premium .hero-portrait{width:min(52vw,680px);height:min(84svh,820px)}
+.hero-premium .hero-portrait{position:fixed;left:50%;bottom:0;width:min(52vw,680px);height:min(84svh,820px);pointer-events:none}
 @media(max-width:900px){.hero-premium .hero-portrait{width:min(62vw,560px);height:76svh}}
 @media(max-width:600px){.hero-premium .hero-portrait{width:98vw;height:62svh}}
