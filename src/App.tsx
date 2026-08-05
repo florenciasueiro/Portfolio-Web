@@ -18,6 +18,7 @@ import "./hero-premium.css";
 import "./brand-overrides.css";
 import "./hero-availability.css";
 import "./hero-intro.css";
+import "./hero-portrait-scroll.css";
 
 const AmbientScene = lazy(() => import("./components/AmbientScene"));
 
