@@ -30,7 +30,7 @@ export function Hero() {
       <div className="cinematic-sticky">
         <div className="cinematic-grid" aria-hidden="true" />
         <motion.div className="cinematic-name" aria-hidden="true" style={{ scale: nameScale, y: nameY, opacity: nameOpacity }}>
-          <span>FLORENCIA</span><span>SOLEDAD SUEIRO</span>
+          <span>FLORENCIA</span><span>SUEIRO</span>
         </motion.div>
 
         <motion.div className="cinematic-copy" style={{ y: copyY, opacity: copyOpacity }}>
