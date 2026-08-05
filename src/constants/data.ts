@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
   {
     index: "01", eyebrow: "Producto propio · Software", title: "Sodium Software",
     description: "Estudio y laboratorio digital donde diseño y desarrollo productos web, automatizaciones y soluciones potenciadas con inteligencia artificial.",
-    stack: ["React", "TypeScript", "Automatización", "IA"], demo: "https://sodium.ghisoni.com.ar/", previewUrl: "https://sodium.ghisoni.com.ar/", accent: "#8b5cf6",
+    stack: ["React", "TypeScript", "Automatización", "IA"], demo: "https://sodium.ghisoni.com.ar/", previewUrl: "https://sodium.ghisoni.com.ar/", accent: "#ff6b00",
   },
   {
     index: "02", eyebrow: "Emprendimiento propio · Wellness", title: "Eterna",
@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
   {
     index: "03", eyebrow: "Proyecto real · Real Estate", title: "Grupo Asset",
     description: "Sitio institucional para presentar Homy 1, sus unidades, amenities, recorridos 360° y canales de contacto comercial.",
-    stack: ["WordPress", "Responsive", "SEO"], demo: "https://grupo-asset.com/", accent: "#8b5cf6",
+    stack: ["WordPress", "Responsive", "SEO"], demo: "https://grupo-asset.com/", accent: "#ff6b00",
   },
   {
     index: "04", eyebrow: "Producto · Frontend", title: "Panel comercial",
