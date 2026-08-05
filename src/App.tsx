@@ -36,9 +36,10 @@ export default function App() {
             <Suspense fallback={<Loader compact />}><AmbientScene /></Suspense>
           </div>
           <Hero />
+          <About />
           <ScrollyStory />
           <KineticBand />
-          <About />
+          
           <Technologies />
           <Projects />
           <Experience />
