@@ -3,10 +3,10 @@ import type { ExperienceItem, Project } from "../types";
 export const NAV_ITEMS = ["Historia", "Sobre mí", "Proyectos", "Experiencia", "Contacto"] as const;
 
 export const TECHNOLOGY_GROUPS = [
-  { name: "Frontend", tools: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Angular", "Tailwind CSS", "Sass", "Bootstrap", "shadcn/ui", "Framer Motion"] },
-  { name: "Backend & APIs", tools: ["Node.js", "Express", "Python", "FastAPI", "Java", "Spring Boot", "C#", ".NET", "PHP", "Laravel", "REST APIs", "GraphQL", "WebSockets"] },
-  { name: "Datos", tools: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "Firebase", "Vector Databases"] },
-  { name: "Cloud & DevOps", tools: ["Git", "GitHub", "Docker", "Kubernetes", "Linux", "CI/CD", "GitHub Actions", "AWS", "Azure", "Google Cloud", "Vercel", "Cloudflare"] },
+  { name: "Frontend", tools: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Angular", "Tailwind CSS", "Sass", "Bootstrap", "Framer Motion"] },
+  { name: "Backend & APIs", tools: ["Node.js", "Express", "Java", "Spring Boot", "PHP", "Laravel", "REST APIs", "GraphQL", "WebSockets"] },
+  { name: "Datos", tools: ["PostgreSQL", "MySQL", "MongoDB", "Supabase", "Firebase"] },
+  { name: "Cloud & DevOps", tools: ["Git", "GitHub", "Docker", "Linux", "GitHub Actions", "AWS", "Google Cloud", "Vercel", "Cloudflare"] },
   { name: "Testing", tools: ["Jest", "Vitest", "Playwright", "Cypress"] },
   { name: "Diseño & Producto", tools: ["Figma", "UI / UX", "Responsive Design", "Accesibilidad", "SEO / SEM", "WordPress"] },
   { name: "IA & Automatización", tools: ["ChatGPT", "OpenAI API", "Claude", "Gemini", "GitHub Copilot", "Cursor", "LangChain", "RAG", "AI Agents", "MCP", "Prompt Engineering", "n8n"] },
