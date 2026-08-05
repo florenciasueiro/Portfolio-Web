@@ -1,0 +1,4 @@
+/* Initial loading sequence: the name is the first visual cue. */
+.hero-premium .hero-name{font-size:clamp(11rem,31vw,31rem);line-height:.62}
+.hero-premium .hero-name span{display:inline-block}
+@media(max-width:600px){.hero-premium .hero-name{font-size:34vw;top:43%}}

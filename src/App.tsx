@@ -17,6 +17,7 @@ import { useLenis } from "./hooks/useLenis";
 import "./hero-premium.css";
 import "./brand-overrides.css";
 import "./hero-availability.css";
+import "./hero-intro.css";
 
 const AmbientScene = lazy(() => import("./components/AmbientScene"));
 
