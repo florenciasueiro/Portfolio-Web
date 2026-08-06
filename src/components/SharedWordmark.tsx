@@ -14,7 +14,8 @@ export function SharedWordmark() {
       if (!source || !target) return;
       const from = source.getBoundingClientRect();
       const to = target.getBoundingClientRect();
-      setGeometry({ left: from.left, top: from.top, x: to.left - from.left, y: to.top - from.top, scale: to.height / from.height });
+      const scale = (to.height / from.height) * .87;
+      setGeometry({ left: from.left, top: from.top, x: to.left + (to.width - from.width * scale) / 2 - from.left, y: to.top + (to.height - from.height * scale) / 2 - from.top, scale });
     };
     measure();
     const observer = new ResizeObserver(measure);
@@ -27,7 +28,7 @@ export function SharedWordmark() {
   const y = useTransform(scrollY, [0, distance], [0, geometry?.y ?? 0]);
   const scale = useTransform(scrollY, [0, distance], [1, geometry?.scale ?? 1]);
   if (!geometry) return null;
-  return <motion.div className="shared-wordmark" aria-hidden="true" style={{ left: geometry.left, top: geometry.top, x, y, scale }}>
-    <span>FLOR</span>
+  return <motion.div className="shared-wordmark" aria-hidden="true" initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: .14 } } }} style={{ left: geometry.left, top: geometry.top, x, y, scale }}>
+    {"FLOR".split("").map((letter, index) => <motion.span key={`${letter}-${index}`} variants={{ hidden: { opacity: 0, x: -10, filter: "blur(8px)" }, visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: .38, ease: [0.16, 1, .3, 1] } } }}>{letter}</motion.span>)}
   </motion.div>;
 }

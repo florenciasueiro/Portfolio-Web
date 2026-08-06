@@ -1,0 +1,3 @@
+/* The invisible measurement anchor matches the visible shared wordmark exactly. */
+.hero-premium .hero-wordmark-source{font-size:clamp(13rem,37vw,36rem);font-weight:300;line-height:.62;letter-spacing:-.1em}
+@media(max-width:600px){.hero-premium .hero-wordmark-source{font-size:38vw}}
