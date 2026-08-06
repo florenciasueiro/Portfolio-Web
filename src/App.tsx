@@ -14,6 +14,7 @@ import { Services } from "./sections/Services";
 import { Contact } from "./sections/Contact";
 import { Footer } from "./sections/Footer";
 import { useLenis } from "./hooks/useLenis";
+import { SharedWordmark } from "./components/SharedWordmark";
 import "./hero-premium.css";
 import "./brand-overrides.css";
 import "./hero-availability.css";
@@ -22,6 +23,7 @@ import "./hero-portrait-scroll.css";
 import "./cursor-visibility.css";
 import "./hero-transition.css";
 import "./hero-name-contrast.css";
+import "./shared-wordmark.css";
 
 const AmbientScene = lazy(() => import("./components/AmbientScene"));
 
@@ -34,6 +36,7 @@ export default function App() {
         <a className="skip-link" href="#main">Saltar al contenido</a>
         <Cursor />
         <Navbar />
+        <SharedWordmark />
         <main id="main">
           <div className="ambient-canvas" aria-hidden="true">
             <Suspense fallback={<Loader compact />}><AmbientScene /></Suspense>
