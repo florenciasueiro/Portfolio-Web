@@ -24,6 +24,7 @@ import "./cursor-visibility.css";
 import "./hero-transition.css";
 import "./hero-name-contrast.css";
 import "./shared-wordmark.css";
+import "./shared-wordmark-layering.css";
 
 const AmbientScene = lazy(() => import("./components/AmbientScene"));
 

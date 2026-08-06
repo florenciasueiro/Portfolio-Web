@@ -1,0 +1,6 @@
+/* The moving word is a background layer in the Hero and a compact navbar mark at rest. */
+.logo-anchor{font-size:15px;letter-spacing:-.07em}
+.shared-wordmark{z-index:80}
+.hero-premium .hero-portrait{z-index:100}
+.hero-premium .hero-copy{z-index:110}
+.hero-premium .hero-glass{z-index:120}
