@@ -20,6 +20,7 @@ import "./brand-overrides.css";
 import "./hero-availability.css";
 import "./hero-intro.css";
 import "./hero-portrait-scroll.css";
+import "./hero-portrait-top.css";
 import "./cursor-visibility.css";
 import "./hero-transition.css";
 import "./hero-name-contrast.css";
