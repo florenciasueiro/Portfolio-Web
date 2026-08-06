@@ -21,7 +21,7 @@ export function Hero() {
   useEffect(() => { const timer = window.setInterval(() => setRole((value) => (value + 1) % roles.length), 2600); return () => window.clearInterval(timer); }, []);
   return <section ref={heroRef} id="inicio" className="hero hero-premium"><div className="hero-glow" /><div className="hero-orbit hero-orbit--one" /><div className="hero-orbit hero-orbit--two" />
     <motion.div className="hero-inner container">
-      <div className="hero-name" aria-hidden="true"><span id="hero-wordmark-anchor" className="hero-letter-source">F</span><span>LOR</span></div>
+      <div id="hero-wordmark-anchor" className="hero-name hero-wordmark-source" aria-hidden="true">FLOR</div>
       <motion.div className="hero-copy" initial={{ opacity: 0, y: 18, filter: "blur(8px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: .8, delay: 1.05 }}>
         <p className="availability"><i /> Disponible para oportunidades</p>
         <div className="role-rotator"><AnimatePresence mode="wait"><motion.h1 key={roles[role]} initial={{ opacity: 0, y: 16, filter: "blur(8px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} exit={{ opacity: 0, y: -16, filter: "blur(8px)" }} transition={{ duration: .45 }}>{roles[role]}</motion.h1></AnimatePresence></div>

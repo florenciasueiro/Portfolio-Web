@@ -26,10 +26,8 @@ export function SharedWordmark() {
   const x = useTransform(scrollY, [0, distance], [0, geometry?.x ?? 0]);
   const y = useTransform(scrollY, [0, distance], [0, geometry?.y ?? 0]);
   const scale = useTransform(scrollY, [0, distance], [1, geometry?.scale ?? 1]);
-  const dotScale = useTransform(scrollY, [distance * .78, distance], [0, 1]);
-
   if (!geometry) return null;
   return <motion.div className="shared-wordmark" aria-hidden="true" style={{ left: geometry.left, top: geometry.top, x, y, scale }}>
-    <span>F</span><motion.span className="shared-wordmark__dot" style={{ scale: dotScale }}>·</motion.span>
+    <span>FLOR</span>
   </motion.div>;
 }
