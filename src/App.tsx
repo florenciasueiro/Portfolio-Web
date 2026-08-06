@@ -21,6 +21,7 @@ import "./hero-intro.css";
 import "./hero-portrait-scroll.css";
 import "./cursor-visibility.css";
 import "./hero-transition.css";
+import "./hero-name-contrast.css";
 
 const AmbientScene = lazy(() => import("./components/AmbientScene"));
 

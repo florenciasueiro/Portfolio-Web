@@ -22,7 +22,7 @@ export function Hero() {
   return <section ref={heroRef} id="inicio" className="hero hero-premium"><div className="hero-glow" /><div className="hero-orbit hero-orbit--one" /><div className="hero-orbit hero-orbit--two" />
     <motion.div className="hero-inner container">
       <motion.div className="hero-name" aria-hidden="true" initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: .14 } } }}>
-        {"FLOR".split("").map((letter, index) => <motion.span key={`${letter}-${index}`} variants={{ hidden: { opacity: 0, y: "18%", filter: "blur(14px)" }, visible: { opacity: .15, y: 0, filter: "blur(0px)", transition: { duration: .58, ease: [0.16, 1, .3, 1] } } }}>{letter}</motion.span>)}
+        {"FLOR".split("").map((letter, index) => <motion.span key={`${letter}-${index}`} variants={{ hidden: { opacity: 0, y: "18%", filter: "blur(14px)" }, visible: { opacity: .52, y: 0, filter: "blur(0px)", transition: { duration: .58, ease: [0.16, 1, .3, 1] } } }}>{letter}</motion.span>)}
       </motion.div>
       <motion.div className="hero-copy" initial={{ opacity: 0, y: 18, filter: "blur(8px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: .8, delay: 1.05 }}>
         <p className="availability"><i /> Disponible para oportunidades</p>
