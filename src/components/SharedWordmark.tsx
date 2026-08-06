@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
-type Geometry = { left: number; top: number; x: number; y: number; scale: number; collapse: number };
+type Geometry = { left: number; top: number; x: number; y: number; scale: number };
 
 export function SharedWordmark() {
   const [geometry, setGeometry] = useState<Geometry | null>(null);
@@ -14,7 +14,7 @@ export function SharedWordmark() {
       if (!source || !target) return;
       const from = source.getBoundingClientRect();
       const to = target.getBoundingClientRect();
-      setGeometry({ left: from.left, top: from.top, x: to.left - from.left, y: to.top - from.top, scale: to.height / from.height, collapse: Math.max(0, from.width * .22) });
+      setGeometry({ left: from.left, top: from.top, x: to.left - from.left, y: to.top - from.top, scale: to.height / from.height });
     };
     measure();
     const observer = new ResizeObserver(measure);
@@ -26,11 +26,10 @@ export function SharedWordmark() {
   const x = useTransform(scrollY, [0, distance], [0, geometry?.x ?? 0]);
   const y = useTransform(scrollY, [0, distance], [0, geometry?.y ?? 0]);
   const scale = useTransform(scrollY, [0, distance], [1, geometry?.scale ?? 1]);
-  const letters = useTransform(scrollY, [distance * .55, distance], [1, 0]);
-  const suffixX = useTransform(scrollY, [distance * .55, distance], [0, -(geometry?.collapse ?? 0)]);
+  const dotScale = useTransform(scrollY, [distance * .78, distance], [0, 1]);
 
   if (!geometry) return null;
   return <motion.div className="shared-wordmark" aria-hidden="true" style={{ left: geometry.left, top: geometry.top, x, y, scale }}>
-    <span>F</span><motion.span className="shared-wordmark__middle" style={{ scaleX: letters }}>LOR </motion.span><motion.span style={{ x: suffixX }}>S</motion.span><motion.span className="shared-wordmark__dot" style={{ x: suffixX }}>·</motion.span>
+    <span>F</span><motion.span className="shared-wordmark__dot" style={{ scale: dotScale }}>·</motion.span>
   </motion.div>;
 }
