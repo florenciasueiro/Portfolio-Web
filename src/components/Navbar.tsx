@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { NAV_ITEMS } from "../constants/data";
@@ -7,7 +7,16 @@ const href = (item: string) => `#${item.toLowerCase().replace(" ", "-").normaliz
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  return <motion.header className="nav-wrap" initial={{ opacity: 0, y: -10, filter: "blur(6px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: .45, delay: 1.82, ease: [0.16, 1, .3, 1] }}><nav className="navbar" aria-label="Navegación principal">
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 24);
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  return <motion.header className={`nav-wrap ${isScrolled ? "is-scrolled" : ""}`} initial={{ opacity: 0, y: -10, filter: "blur(6px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: .45, delay: 1.82, ease: [0.16, 1, .3, 1] }}><nav className="navbar" aria-label="Navegación principal">
     <a id="nav-logo-anchor" className="logo logo-anchor" href="#inicio" aria-label="Florencia, inicio">FLOR</a>
     <div className="nav-desktop">{NAV_ITEMS.map(item => <a key={item} href={href(item)}>{item}</a>)}</div>
     <button className="menu-button" aria-label={open ? "Cerrar menú" : "Abrir menú"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>

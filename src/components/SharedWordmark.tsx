@@ -29,7 +29,7 @@ export function SharedWordmark() {
   const scale = useTransform(scrollY, [0, distance], [1, geometry?.scale ?? 1]);
   const opacity = useTransform(scrollY, [0, distance], [.5, 1]);
   if (!geometry) return null;
-  return <motion.div className="shared-wordmark" aria-hidden="true" initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: .14 } } }} style={{ left: geometry.left, top: geometry.top, x, y, scale, opacity }}>
+  return <motion.div className="shared-wordmark" aria-hidden="true" initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: .14 } } }} style={{ left: geometry.left, top: geometry.top, x, y, scale, opacity, color: "#f5f5f5" }}>
     {"Flor".split("").map((letter, index) => <motion.span key={`${letter}-${index}`} variants={{ hidden: { opacity: 0, x: -10, filter: "blur(8px)" }, visible: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: .38, ease: [0.16, 1, .3, 1] } } }}>{letter}</motion.span>)}
   </motion.div>;
 }
